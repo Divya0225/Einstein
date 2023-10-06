@@ -1,0 +1,137 @@
+body{
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+.container{
+    color:black;
+    height:100vh;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr 1fr 2fr 1fr 0.3fr;
+    grid-gap:2rem;
+    grid-template-areas:
+    "nav nav"
+    "main main"
+    "published published"
+    "blogs awards"
+    "footer footer"
+}
+nav{
+    background-color:aqua;
+    grid-area: nav;
+}
+nav a{
+    float:left;
+    display:block;
+    padding:14px 16px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: brown;
+    color:white;
+    font-family:'Courier New', Courier, monospace;
+    font-weight:900;
+
+}
+
+main{
+    background-color: rgb(190, 147, 194);
+    grid-area: main;
+}
+#aboutme img{
+    height:200px;
+    width:200px;
+    border-radius: 50%;;
+}
+#description{
+    display: flex;
+}
+.box{
+    width:30%;
+    display:inline-block;
+    text-align: center;
+}
+.box2{
+    width:70%;
+    text-align: left;
+    font-size: larger;
+}
+#published{
+    background-color: rgb(73, 155, 194);
+    grid-area: published;
+}
+.works{
+    display:flex;
+}
+.works img{
+    height:150px;
+    width:150px;
+}
+.books{
+    width:30%;
+    display:inline-block;
+    text-align: center;
+}
+.contents{
+    width:70%;
+    text-align: left;
+}
+.contents a{
+    color:darkred;
+    font-size: large;
+    text-decoration: none;
+}
+.contents a:hover{
+    color:red;
+}
+#blogs{
+    background-color: rgb(190, 147, 194);
+    grid-area: blogs;
+    
+}
+#blogs a{
+    color: black;
+    text-decoration: none;
+    display:block;
+}
+#blogs a:hover{
+    color: red;
+    text-decoration: none;
+}
+#awards{
+    background-color:rgb(190, 147, 194);
+    grid-area: awards;
+}
+footer{
+    background-color:aqua;
+    grid-area: footer;
+    font-size: larger;
+    text-align: center;
+}
+/*mobile layout*/
+@media only screen and (max-width:500px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 1fr 2fr 1fr 1fr 0.3fr;
+        grid-template-areas:
+        "nav"
+        "main"
+        "published"
+        "blogs"
+        "awards"
+        "footer"
+
+    }
+    #aboutme img{
+        height:100px;
+        width:100px;
+        border-radius: 50%;;
+    }
+    .works img{
+        height:100px;
+        width:100px;
+    }
+
+}
